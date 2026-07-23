@@ -1,0 +1,56 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP TABLE IF EXISTS messages;
+DROP TABLE IF EXISTS raw_import;
+DROP TABLE IF EXISTS conversations;
+DROP TABLE IF EXISTS users;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+
+-- ==============================
+-- USERS
+-- ==============================
+CREATE TABLE users (
+    user_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- ==============================
+-- CONVERSATIONS
+-- ==============================
+CREATE TABLE conversations (
+    convo_id VARCHAR(100) PRIMARY KEY,
+    user_id INT UNSIGNED NOT NULL,
+    convo_title VARCHAR(255),
+    created_at DATETIME,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+
+-- ==============================
+-- MESSAGES
+-- ==============================
+CREATE TABLE messages (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    convo_id VARCHAR(100) NOT NULL,
+    role ENUM('user','assistant','system','tool') NOT NULL,
+    message LONGTEXT,
+    created_at DATETIME,
+    FOREIGN KEY (convo_id) REFERENCES conversations(convo_id)
+);
+
+
+-- ==============================
+-- RAW IMPORT
+-- (only stores file path, not JSON)
+-- ==============================
+CREATE TABLE raw_import (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    convo_id VARCHAR(100) NOT NULL,
+    file_path VARCHAR(255) NOT NULL,
+    imported_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (convo_id) REFERENCES conversations(convo_id)
+);
