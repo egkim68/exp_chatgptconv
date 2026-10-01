@@ -1,0 +1,7 @@
+model,criterion,n,total,pct
+Gemini,High segment coherence,2113,2210,95.6
+Gemini,Stable topic evolution,1931,2210,87.4
+Gemini,Both criteria met,1922,2210,87.0
+Claude,High segment coherence,2196,2210,99.4
+Claude,Stable topic evolution,2026,2210,91.7
+Claude,Both criteria met,2023,2210,91.5

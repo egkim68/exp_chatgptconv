@@ -1,0 +1,5 @@
+dimension,coder1_vs_coder2,coder1_vs_claude,coder1_vs_gemini,coder2_vs_claude,coder2_vs_gemini,common_n,common_coder1_vs_claude,common_coder1_vs_gemini,common_coder2_vs_claude,common_coder2_vs_gemini
+Academic Output Type,0.776 (n=100),0.558 (n=100),0.556 (n=100),0.497 (n=100),0.498 (n=100),100,0.558,0.556,0.497,0.498
+Cognitive Complexity,0.767 (n=100),0.207 (n=100),0.299 (n=100),0.203 (n=100),0.308 (n=100),100,0.207,0.299,0.203,0.308
+Topic and LIS Context,0.668 (n=100),0.149 (n=99),0.469 (n=82),0.079 (n=99),0.310 (n=82),82,0.179,0.469,0.095,0.31
+Query Reformulation,0.787 (n=100),0.034 (n=100),0.460 (n=100),0.058 (n=100),0.421 (n=100),100,0.034,0.46,0.058,0.421

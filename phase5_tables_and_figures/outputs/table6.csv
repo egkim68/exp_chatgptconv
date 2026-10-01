@@ -1,0 +1,9 @@
+level,dimension,kappa_all,kappa_valid,n_valid
+segment,Academic Output Type,0.49,0.491,2196
+segment,Cognitive Complexity,0.485,0.485,2199
+segment,LIS Context,0.347,0.354,1851
+segment,Query Reformulation,0.083,0.085,2112
+conversation,Academic Output Type,0.472,0.473,1473
+conversation,Cognitive Complexity,0.485,0.485,1475
+conversation,LIS Context,0.329,0.337,1225
+conversation,Query Reformulation,0.122,0.129,1370
